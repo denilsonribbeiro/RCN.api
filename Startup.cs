@@ -30,6 +30,7 @@ namespace RCN.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationInsightsTelemetry("a7648671-122b-43b6-9740-c410191f43e6");
             services.AddControllersWithViews();
             services.AddDbContext<ProdutoContexto>(opt => 
                 opt.UseInMemoryDatabase(databaseName:"produtoInMemory")
